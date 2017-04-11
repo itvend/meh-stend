@@ -16,7 +16,7 @@ namespace MehaanikaStend_Charp
         private static bool _ignoreLoad = true;
         private static bool _isChanged = false;
 
-        string CalDataFileName = "caldata.xml";
+        //string CalDataFileName = "caldata.xml";
 
         public Settings(SerialPort _SettingsSerialRemote)
         {
@@ -84,7 +84,7 @@ namespace MehaanikaStend_Charp
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            calData = CalibrationConfig.Deserialize(CalDataFileName);
+            calData = CalibrationConfig.Deserialize(mainWindow.fileName);
 
             pollEtalonP0.Text = calData.pullEtalonP0.ToString();
             pollEtalonP1.Text = calData.pullEtalonP1.ToString();
@@ -145,7 +145,7 @@ namespace MehaanikaStend_Charp
 
             calData.ADCBallResistance = Convert.ToInt32(ADCBallResistanceV.Text);
 
-            CalibrationConfig.Serialize(CalDataFileName, calData);
+            CalibrationConfig.Serialize(mainWindow.fileName, calData);
 
             _isChanged = false;
         }

@@ -16,7 +16,7 @@ namespace MehaanikaStend_Charp
         private double _tempADCValue;
         private double _rpmSensorValue;
 
-        private string CalDataFileName = "caldata.xml";
+        //private string CalDataFileName = "caldata.xml";
         private const double _kelvinConst = 273.15;
 
         private CalibrationConfig calData;
@@ -32,7 +32,7 @@ namespace MehaanikaStend_Charp
 
         public void UpdateCaldata()
         {
-            calData = CalibrationConfig.Deserialize(CalDataFileName);
+            calData = CalibrationConfig.Deserialize(mainWindow.fileName);
 
             linPullSensor = new LinearEQS(calData.pullEtalonP0, calData.pullADCP0, calData.pullEtalonP1, calData.pullADCP1);
             linTorqueSensor = new LinearEQS(calData.torqueEtalonP0, calData.torqueADCP0, calData.torqueEtalonP1, calData.torqueADCP1);
