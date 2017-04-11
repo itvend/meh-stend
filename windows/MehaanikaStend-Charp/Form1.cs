@@ -371,11 +371,14 @@ namespace MehaanikaStend_Charp
 
         private void mainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Kill thread
             _isReading = false;
             if (ReadSerialDataThread.IsAlive)
             {
                 ReadSerialDataThread.Join();
             }
+            // Close serial port
+            serialPort.Close();
         }
 
         private void updateDisplays_Tick(object sender, EventArgs e)
