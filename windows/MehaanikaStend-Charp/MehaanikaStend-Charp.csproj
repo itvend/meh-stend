@@ -55,10 +55,10 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E28325AF46E9F4D41FEFE19ABE9A346E5F7FEAB3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>4D16204A99A924ABDEF93DEBD4E10448E64B119C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MehaanikaStend-Charp_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MehaanikaStend-Charp_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -125,6 +125,7 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MehaanikaStend-Charp_1_TemporaryKey.pfx" />
     <None Include="MehaanikaStend-Charp_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

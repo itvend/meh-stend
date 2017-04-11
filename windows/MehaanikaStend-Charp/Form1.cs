@@ -17,6 +17,9 @@ namespace MehaanikaStend_Charp
 
     public partial class mainWindow : Form
     {
+
+        public static string fileName = "CalibrationSettings.xml";
+
         public enum ReadCommands : byte
         {
             CH1=0x35,
@@ -48,28 +51,10 @@ namespace MehaanikaStend_Charp
         public mainWindow()
         {
             InitializeComponent();
-            GeneratePortList(portList);
-
-            //dataChart.Legends.Add(new Legend("Legendid"));
-
-            //PullSeries.ChartType = SeriesChartType.Line;
-            //PullSeries.BorderWidth = 3;
-
-            //TorqueSeries.ChartType = SeriesChartType.Line;
-            //TorqueSeries.BorderWidth = 3;
-
-            //TempSeries.ChartType = SeriesChartType.Line;
-            //RpmSeries.ChartType = SeriesChartType.Line;
 
             sensors = new Sensors();
 
-            //dataChart.ChartAreas["ChartArea1"].Position = new ElementPosition(25, 10, 68, 85);
-            //dataChart.ChartAreas["ChartArea1"].InnerPlotPosition = new ElementPosition(10, 0, 90, 90);
-
-            //CreateYAxis(dataChart, dataChart.ChartAreas["ChartArea1"], PullSeries, 13, 8);
-            //CreateYAxis(dataChart, dataChart.ChartAreas["ChartArea1"], TorqueSeries, 22, 8);
-
-            //CreateYAxis(dataChart, dataChart.ChartAreas["ChartArea1"], TempSeries, 24, 12);
+            GeneratePortList(portList);
 
             Zed();
 
@@ -246,7 +231,19 @@ namespace MehaanikaStend_Charp
             {
                 cb.Items.Add(port);
             }
-            cb.SelectedIndex = 0;
+
+            if ( cb.Items.Count != 0 )
+            {
+                cb.SelectedIndex = 0;
+            }
+            else
+            {
+                DialogResult rs =  MessageBox.Show("Ühetegi serial seadet pole, sulgeb programmi!", "Tõrge!", MessageBoxButtons.OK);
+                if(rs > 0)
+                {
+                    this.Close();
+                }
+            }
         }
 
         private void portConnect_Click(object sender, EventArgs e)
