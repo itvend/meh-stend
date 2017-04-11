@@ -327,17 +327,11 @@ namespace MehaanikaStend_Charp
             updateRateChanger.Enabled = true;
         }
 
-        private void portList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //logOut.AppendText("Valitud com port: " + portList.SelectedItem.ToString() + "\r\n");
-        }
-
         private void clearGraph_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Kas oled kindel et tahad graafiku kustutada!", "Puhasta graafik", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //ClearGraph();
                 ClearGraphV2();
             }
         }

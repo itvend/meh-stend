@@ -73,14 +73,13 @@
             this.portList.FormattingEnabled = true;
             this.portList.Location = new System.Drawing.Point(6, 19);
             this.portList.Name = "portList";
-            this.portList.Size = new System.Drawing.Size(121, 21);
+            this.portList.Size = new System.Drawing.Size(64, 21);
             this.portList.TabIndex = 0;
-            this.portList.SelectedIndexChanged += new System.EventHandler(this.portList_SelectedIndexChanged);
             // 
             // portConnect
             // 
             this.portConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.portConnect.Location = new System.Drawing.Point(161, 18);
+            this.portConnect.Location = new System.Drawing.Point(76, 18);
             this.portConnect.Name = "portConnect";
             this.portConnect.Size = new System.Drawing.Size(103, 21);
             this.portConnect.TabIndex = 1;
@@ -94,7 +93,7 @@
             this.groupBox1.Controls.Add(this.portConnect);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 53);
+            this.groupBox1.Size = new System.Drawing.Size(190, 53);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arduino ühendus";
@@ -317,7 +316,7 @@
             // 
             this.calSettings.Location = new System.Drawing.Point(12, 69);
             this.calSettings.Name = "calSettings";
-            this.calSettings.Size = new System.Drawing.Size(144, 23);
+            this.calSettings.Size = new System.Drawing.Size(190, 23);
             this.calSettings.TabIndex = 6;
             this.calSettings.Text = "Seaded";
             this.calSettings.UseVisualStyleBackColor = true;
@@ -333,7 +332,7 @@
             // 
             this.About.Location = new System.Drawing.Point(12, 97);
             this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(20, 24);
+            this.About.Size = new System.Drawing.Size(190, 24);
             this.About.TabIndex = 8;
             this.About.Text = "?";
             this.About.UseVisualStyleBackColor = true;
