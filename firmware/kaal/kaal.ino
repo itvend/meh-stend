@@ -4,8 +4,11 @@
 #define DOUT  3
 #define CLK  2
 
+#define DOUT2  3
+#define CLK2  2
+
 HX711 channel1(DOUT, CLK);
-HX711 channel2(DOUT, CLK);
+HX711 channel2(DOUT2, CLK2);
 
 struct dataBayLoad{
   long channel_a_raw;
@@ -50,9 +53,9 @@ void loop() {
       if(buffer == 0x40){
         
           pData->channel_a_raw = channel1.read();
-          pData->channel_b_raw = channel1.read();
+          pData->channel_b_raw = channel2.read();
           pData->temp = analogRead(1);
-          pData->rpm = 3500;
+          pData->rpm = 0;
   
         Serial.write((uint8_t *)pData, sizeof(struct dataBayLoad));
       }
