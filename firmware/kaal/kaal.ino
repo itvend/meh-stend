@@ -4,8 +4,8 @@
 #define DOUT  3
 #define CLK  2
 
-#define DOUT2  3
-#define CLK2  2
+#define DOUT2  5
+#define CLK2  4
 
 HX711 channel1(DOUT, CLK);
 HX711 channel2(DOUT2, CLK2);

@@ -68,8 +68,8 @@ namespace MehaanikaStend_Charp
             myPane.Title.Text = "Mõõtetulemused";
             myPane.XAxis.Title.Text = "Time, ms";
 
-            myPane.Y2Axis.Title.Text = "Tõmme, g";
-            myPane.YAxis.Title.Text = "Vääne, g";
+            myPane.Y2Axis.Title.Text = "Tõmme, N";
+            myPane.YAxis.Title.Text = "Vääne, N";
 
             // Generate a red curve with diamond symbols, and "Velocity" in the legend
             LineItem myCurve = myPane.AddCurve("Vääne",
@@ -380,8 +380,8 @@ namespace MehaanikaStend_Charp
 
         private void updateDisplays_Tick(object sender, EventArgs e)
         {
-            pollValue.Text = sensors.PullSensor.ToString() + " g";
-            torqueValue.Text = sensors.TorqueSensor.ToString() +" g";
+            pollValue.Text = sensors.PullSensor.ToString() + " N";
+            torqueValue.Text = sensors.TorqueSensor.ToString() +" N";
             tempValue.Text = sensors.TempSensorOut + " °C";
             rpmValue.Text = sensors.Rpm + " p/min";
         }

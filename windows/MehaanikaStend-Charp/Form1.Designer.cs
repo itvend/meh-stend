@@ -251,7 +251,7 @@
             this.groupBox6.Size = new System.Drawing.Size(209, 78);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Temperatuuri andur";
+            this.groupBox6.Text = "Temperatuur";
             // 
             // tempValue
             // 
@@ -274,7 +274,7 @@
             this.groupBox5.Size = new System.Drawing.Size(209, 78);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Väände andur";
+            this.groupBox5.Text = "Vääne";
             // 
             // torqueValue
             // 
@@ -297,7 +297,7 @@
             this.groupBox4.Size = new System.Drawing.Size(209, 78);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tõmbe andur";
+            this.groupBox4.Text = "Tõmme";
             // 
             // pollValue
             // 

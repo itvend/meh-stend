@@ -18,6 +18,7 @@ namespace MehaanikaStend_Charp
 
         //private string CalDataFileName = "caldata.xml";
         private const double _kelvinConst = 273.15;
+        private const double _grammToNewton = 0.00980665002864;
 
         private CalibrationConfig calData;
 
@@ -41,12 +42,12 @@ namespace MehaanikaStend_Charp
 
         private double CalculatePullSensor()
         {
-            return Math.Round(linPullSensor.y(_pullSensorValue), 0);
+            return Math.Round(linPullSensor.y(_pullSensorValue) * _grammToNewton, 0);
         }
 
         private double CalculateTorqueSensor()
         {
-            return Math.Round(linTorqueSensor.y(_torqueSensorValue), 0);
+            return Math.Round(linTorqueSensor.y(_torqueSensorValue) * _grammToNewton, 0);
         }
 
         private double CalculateR(double voltage_mVolts)
