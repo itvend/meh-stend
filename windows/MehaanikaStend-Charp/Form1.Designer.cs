@@ -234,7 +234,7 @@
             // 
             this.rpmValue.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rpmValue.Font = new System.Drawing.Font("Trebuchet MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.rpmValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.rpmValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.rpmValue.Location = new System.Drawing.Point(17, 19);
             this.rpmValue.Name = "rpmValue";
             this.rpmValue.ReadOnly = true;
